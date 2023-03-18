@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mobile</title>
+    <style>
+    body
+    {
+        background-color:blue;
+        margin:0;
+     }
+        .mobile1
+        {
+            background-color:lightblue;
+            padding:20px;
+
+         }
+          .box
+        {
+            background-color:#fff;
+            padding:10px;
+            width:300px;
+            margin:20px;
+            text-align:center;
+            box-shadow:0 0 5px black;
+         }
+
+
+        .FlexDiv
+        {
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .s2
+        {
+            color:grey;
+            font-size:25px;
+            }
+        .v3
+        {
+            background-color:white;
+            padding:5px;
+            color:black;
+            border-radius:10px;
+            font-size:10px;
+            }
+        .mobile2
+        {
+            background-color:lightblue;
+            color:black;
+            font-size:40px
+            }
+
+    </style>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<section>
+    <div class="mobile2">
+         <marquee><c1>MOBILE SALAS</c1></marquee>
+    </div>
+    <div class="mobile1">
+
+        <div class="FlexDiv">
+            {% for row in data: %}
+            <div class="box">
+                <img src="/static/{{ row[1] }}" width="200" height="300"><br>
+                <font color="blue" size="5">{{ row[2] }}</font><br>
+                <font color="green" size="5">Rs. {{ row[3] }} /-</font> <br>
+                <font color="black" size="5"> {{ row[4] }} </font> <br> <br>
+                <span class="v3"><a class="menu" href="/order">ORDER</a> </span> <br> <br>
+                <span class="s2"> Vijayfilpcart.in <br>FREE Shipping</span>
+
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+<div>
+    {% include "footer.html" %}
+</div>
+
+
+</body>
+</html>

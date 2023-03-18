@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fashaion</title>
+    <style>
+        body
+        {
+           background-color:lightblue;
+           margin:0;
+        }
+        .n1
+        {
+            background-color:lightblue;
+            padding:20px;
+
+         }
+        .box
+        {
+            background-color:#fff;
+            padding:10px;
+            width:300px;
+            margin:20px;
+            text-align:center;
+            box-shadow:0 0 5px black;
+        }
+         .FlexDiv
+        {
+            display:flex;
+            flex-wrap: wrap;
+        }
+         .s2
+        {
+            color:grey;
+            font-size:25px;
+            }
+          .v3
+        {
+            background-color:white;
+            padding:5px;
+            color:black;
+            font-size:10px;
+            }
+            .n2
+            {
+            background-color:lightblue;
+            color:black;
+            font-size:40px;
+            }
+
+    </style>
+
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<section>
+    <div class="n2">
+        <marquee>FASHION</marquee>
+    </div>
+
+
+             <div class="n1">
+            <div class="FlexDiv">
+            {% for row in data: %}
+            <div class="box">
+                <img src="/static/{{ row[1] }}" width="100%" height="250"><br><br>
+                <font color="blue" size="5">{{ row[2] }}</font><br>
+                <font color="green" size="4">Rs. {{ row[3] }} /-</font><br>
+                <font color="blue" size="4"> {{ row[4] }} </font><br> <br>
+                <span class="v3"><a class="menu" href="/order">ORDER</a> </span> <br> <br>
+                  <span class="s2"> Vijayfilpcart.in <br>FREE Shipping</span>
+
+            </div>
+            {% endfor %}
+
+</section>
+
+<div>
+    {% include "footer.html" %}
+</div>
+
+
+</body>
+</html>

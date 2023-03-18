@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>order</title>
+  <style>
+      .o1
+    {
+      background-color:#eee;
+      padding:10px;
+      color:red;
+      font-size:blod;
+      }
+      .o2
+      {
+        background-color:#ffb ;
+        padding:100px;
+        color:green;
+        font-size:bold;
+       }
+       .textbox
+       {
+           padding:10px;
+           width:100%;
+           border:1px #ffa;
+           border-radius:5px;
+        }
+       .vijay
+       {
+            background-color:red;
+            color:white;
+            padding:10px;
+            width:100%;
+            border:1px solid #aaa;
+            border-radius:5px;
+            font-size:30px;
+            }
+
+  </style>
+</head>
+<body>
+
+<div class="o1"> <center>
+
+  ORDER </center>
+</div>
+<div class="o2">
+  <form  name="form" action="/customersave" method="POST">
+
+       ORDER_NUMBER <br> <input type="text" class="textbox" name="order_Number"><br> <br>
+       CUSTOMER_NAME<br> <input type="text"class="textbox" name="customer_Name"><br><br>
+       CUSTOMER_PHONE_NO<br> <input type="text" class="textbox" name="customer_phone_no"><br> <br>
+       CUSTOMER_GMAIL<br><input type="text" class="textbox" name="customer_Gmail"><br> <br>
+       CUSTOMER_ADDERSS<br><input type="text"class="textbox" name="customer_Adderss"><br> <br>
+       PRODUCT_NAME<br><input type="text"class="textbox" name="product_name"><br> <br>
+       PRODUCT_QTY<br><input type="text" class="textbox" name="product_Qty"> <br> <br>
+       AMMOUNT<br><input type="text" class="textbox" name="Ammount"> <br> <br>
+       <input type="submit" value="ORDER" class="vijay">
+
+  </form>
+</div>
+
+</body>
+</html>

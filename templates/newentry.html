@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sales</title>
+  <style>
+ .c1
+    {
+      background-color:white;
+      padding:30px;
+      color:black;
+      font-size:20px;
+     }
+     .b1
+     {
+      color:red;
+     }
+     th
+     {
+      background-color:#ffa;
+      padding:10px;
+      }
+      td
+      {
+       background-color:#ffe;
+      padding:10px;
+      }
+      table
+      {
+        background-color:#ffa;
+        }
+
+          .aaa
+          {
+            background-color:#ffb;
+            padding:10px;
+            color:red;
+            font-size:20px;
+            }
+            a
+            {
+              background-color:red;
+              padding:10px;
+              }
+              .bb
+              {
+                background-color:green;
+                padding:10px;
+                }
+
+  </style>
+</head>
+<body>
+<div>
+
+</div>
+<div class="c1">
+<span class="b1"><h1>Customer Details(table views)</h1></span><br>
+  <a class="aaa" href="/salesentry">New Entry</a> <br>
+  <table>
+    <tr>
+      <th>SALES ID</th>
+      <th>SALES PHOTO</th>
+      <th>SALES NAME</th>
+      <th>SALAS AMOUNT</th>
+      <th>SALASPECATION</th>
+      <th>SALESTYPE</th>
+      <th colspan="2"> ACTION</th>
+    </tr>
+
+  {% for row in data %}
+  <tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+    <td>{{ row[3] }}</td>
+    <td>{{ row[4] }}</td>
+    <td>{{ row[5] }}</td>
+    <td> <a href="/salesdelete?cid={{ row[0] }}"> Delete </a>
+    </td>
+    <td> <a class="bb" href="/salesedit?cid={{ row[0] }}">Edit</a></td>
+
+  </tr>
+    {% endfor %}
+
+  </table>
+
+
+
+</div>
+
+<div>
+
+</div>
+
+
+</body>
+</html>
